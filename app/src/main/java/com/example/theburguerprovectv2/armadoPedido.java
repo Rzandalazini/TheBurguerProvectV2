@@ -28,6 +28,17 @@ public class armadoPedido extends AppCompatActivity {
         rearmado = findViewById(R.id.rearmado);
         buttonCarga = findViewById(R.id.buttonCarga);
 
+        rearmado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                groupHamburguesa.clearCheck();
+                groupOpcion.clearCheck();
+                groupPapa.clearCheck();
+                groupBebida.clearCheck();
+                groupPostre.clearCheck();
+            }
+        });
+
 
         buttonCarga.setOnClickListener(new View.OnClickListener() {
             @Override
