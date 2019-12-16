@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+    <LinearLayout
+        android:id="@+id/principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="174dp">
+
+        <LinearLayout
+            android:id="@+id/MesasBarra"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_mesas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/mesas"
+                android:textAlignment="center"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <LinearLayout
+                    android:id="@+id/listaMesas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/mesa1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00A02D2D"
+                        android:onClick="actualizar"
+                        android:tag="mesa1"
+                        android:text="@string/_1" />
+
+                    <Button
+                        android:id="@+id/mesa2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa2"
+                        android:text="@string/_2" />
+
+                    <Button
+                        android:id="@+id/mesa3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa3"
+                        android:text="@string/_3" />
+
+                    <Button
+                        android:id="@+id/mesa4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa4"
+                        android:text="@string/_4" />
+
+                    <Button
+                        android:id="@+id/mesa5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa5"
+                        android:text="@string/_5" />
+
+                    <Button
+                        android:id="@+id/mesa6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa6"
+                        android:text="@string/_6" />
+
+                    <Button
+                        android:id="@+id/mesa7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa7"
+                        android:text="@string/_7" />
+
+                    <Button
+                        android:id="@+id/mesa8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa8"
+                        android:text="@string/_8" />
+
+                    <Button
+                        android:id="@+id/mesa9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa9"
+                        android:text="@string/_9" />
+
+                    <Button
+                        android:id="@+id/mesa10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:onClick="actualizar"
+                        android:tag="mesa10"
+                        android:text="@string/_10" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/txt_barra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/barra" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/editarBarra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/editar"
+                    tools:srcCompat="@android:drawable/ic_input_add" />
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pedidoActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/pedido_activo"
+                android:textAlignment="center"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/editarPedido"
+                    android:layout_width="149dp"
+                    android:layout_height="79dp"
+                    android:layout_gravity="start"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/editar"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <ImageButton
+                    android:id="@+id/borrarPedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/delete_btn"
+                    app:srcCompat="@android:drawable/ic_delete" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="540dp"
+                android:layout_gravity="top">
+
+                <LinearLayout
+                    android:id="@+id/lineasPedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/cerrarPedido"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:background="#27000000"
+                android:contentDescription="@string/cargar"
+                android:text="@string/cerrar_pedido" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

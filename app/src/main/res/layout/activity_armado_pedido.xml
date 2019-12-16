@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".armadoPedido"
+    android:gravity="center">
+
+
+    <Button
+        android:id="@+id/rearmado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/rearmar_pedido" />
+
+    <TextView
+        android:id="@+id/tvHamburguesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rearmado"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hamburguesa"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/seleccion_hamburguesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHamburguesa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:duplicateParentState="false"
+            android:text="@string/simple" />
+
+        <RadioButton
+            android:id="@+id/doble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:gravity="fill"
+            android:text="@string/doble" />
+
+        <RadioButton
+            android:id="@+id/triple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:gravity="fill"
+            android:text="@string/triple" />
+
+        <RadioButton
+            android:id="@+id/cuadruple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:gravity="fill"
+            android:text="@string/cu_druple" />
+
+        <RadioButton
+            android:id="@+id/bomba"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:gravity="fill|end"
+            android:text="@string/bomba" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/opcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seleccion_hamburguesa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/opcion"
+        android:textSize="20sp"/>
+
+    <RadioGroup
+        android:id="@+id/seleccion_opcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opcion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/opcion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:duplicateParentState="false"
+            android:text="@string/_1" />
+
+        <RadioButton
+            android:id="@+id/opcion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/_2" />
+
+        <RadioButton
+            android:id="@+id/opcion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/_3" />
+
+        <RadioButton
+            android:id="@+id/opcion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/_4" />
+
+        <RadioButton
+            android:id="@+id/opcion5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/_5" />
+
+        <RadioButton
+            android:id="@+id/opcion6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/_6" />
+
+        <RadioButton
+            android:id="@+id/opcion7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/_7" />
+
+        <RadioButton
+            android:id="@+id/opcion8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/_8" />
+
+        <RadioButton
+            android:id="@+id/opcion9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/_9" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/papas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seleccion_opcion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/papas"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/seleccion_papas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/papas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/papasclasicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:duplicateParentState="false"
+            android:text="@string/cl_sicas"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/papasamericanas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/americanas"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/papaspoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/point"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/papaspicantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/picantes"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/salchipapas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/salchipapas"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/bebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seleccion_papas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/bebidas"
+        android:textSize="20sp"></TextView>
+
+    <RadioGroup
+        android:id="@+id/seleccion_bebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bebidas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/pinta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:duplicateParentState="false"
+            android:text="@string/pinta"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/gaseosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/gaseosa"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/agua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/agua"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tragos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/trago"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/aguasaborizada"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/agua_saborizada"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/postre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seleccion_bebidas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/postres"
+        android:textSize="20sp"></TextView>
+
+    <RadioGroup
+        android:id="@+id/seleccion_postres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/chocotorta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:duplicateParentState="false"
+            android:text="@string/chocotorta"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tiramisu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/tiramis"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lemonpie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/lemon_pie"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/nutella"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="@string/nutella"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/oreo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:allowUndo="true"
+            android:text="@string/oreo"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seleccion_postres"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/cargar">
+
+    </Button>
+
+
+</RelativeLayout>
+
+
