@@ -3,6 +3,7 @@ package com.example.theburguerprovectv2;
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.Menu;
@@ -36,7 +37,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogoConexión.DialogListener {
 
     LinearLayout lineasPedido;
 
@@ -60,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
     String dbLineaPedido = "";
 
+    String ipServidor = "";
+    String puertoServidor = "";
+    String URL = "http://" + ipServidor + ":" + puertoServidor + "/theburguerproject/registro.php";
 
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String IP = "IP";
+    public static final String PUERTO = "PUERTO";
 
 
     public void actualizar(View view){
@@ -203,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.settings:
-
+                    openDialog();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -213,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        loadData();
 
 
         lineasPedido =findViewById(R.id.lineasPedido);
@@ -499,10 +506,29 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+    public void openDialog(){
+        DialogoConexión dialogo = new DialogoConexión();
+        dialogo.show(getSupportFragmentManager(), "datos");
+    }
 
+    @Override
+    public void applyText(String ip, String puerto) {
+        ipServidor = ip;
+        puertoServidor = puerto;
+        saveData();
+    }
 
-
-
-
-
+    public void  saveData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(IP,ipServidor);
+        editor.putString(PUERTO, puertoServidor);
+        editor.apply();
+        Toast.makeText(this, "Configuración Guardada", Toast.LENGTH_SHORT).show();
+    }
+    public void loadData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        ipServidor = sharedPreferences.getString(IP,"");
+        puertoServidor = sharedPreferences.getString(PUERTO,"");
+    }
 }
